@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+#comentario-form {
+    margin-bottom: 20px;
+}
+
+#comentario-input {
+    width: 100%;
+    min-height: 60px;
+    margin-bottom: 10px;
+    padding: 8px;
+    font-size: 16px;
+}
+
+button {
+    padding: 8px 16px;
+    font-size: 16px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button.eliminar {
+    background: #dc3545;
+    margin-left: 10px;
+}
+
+.comentario {
+    background: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.fecha {
+    display: block;
+    color: #888;
+    font-size: 12px;
+    margin-top: 5px;
+}
