@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Password Generator</h2>
+        <div class="output-section">
+            <input type="text" id="password" readonly value="PTx1f5DaFX">
+            <button id="copy-btn" title="Copy to clipboard">📋</button>
+        </div>
+        <div class="form">
+            <div class="length-section">
+                <label for="length">Character Length</label>
+                <span id="length-value">10</span>
+            </div>
+            <input type="range" id="length" min="4" max="20" value="10">
+            <div class="options">
+                <div>
+                    <input type="checkbox" id="uppercase" checked>
+                    <label for="uppercase">Include Uppercase Letters</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="lowercase" checked>
+                    <label for="lowercase">Include Lowercase Letters</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="numbers" checked>
+                    <label for="numbers">Include Numbers</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="symbols" checked>
+                    <label for="symbols">Include Symbols</label>
+                </div>
+            </div>
+            <div class="strength-section">
+                <span>STRENGTH</span>
+                <span id="strength-label">MEDIUM</span>
+                <div id="strength-bars">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+            <button id="generate-btn">GENERATE +</button>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,149 @@
+
+body {
+    background: #181924;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.container {
+    background: #23243a;
+    border-radius: 16px;
+    box-shadow: 0 4px 32px #000a;
+    padding: 32px 28px 28px 28px;
+    min-width: 340px;
+    max-width: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container h2 {
+    color: #b2ffb2;
+    font-weight: 600;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+}
+
+.output-section {
+    display: flex;
+    align-items: center;
+    background: #181924;
+    border-radius: 8px;
+    padding: 10px 12px;
+    margin-bottom: 18px;
+    width: 100%;
+}
+
+#password {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.3rem;
+    font-family: 'Fira Mono', monospace;
+    width: 100%;
+    outline: none;
+    letter-spacing: 1px;
+}
+
+#copy-btn {
+    background: none;
+    border: none;
+    color: #b2ffb2;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-left: 8px;
+    transition: color 0.2s;
+}
+#copy-btn:hover {
+    color: #fff;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 18px;
+}
+
+.length-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    margin-bottom: -10px;
+}
+
+#length {
+    width: 100%;
+    margin: 0 0 8px 0;
+    accent-color: #b2ffb2;
+}
+
+#length-value {
+    color: #b2ffb2;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.options label {
+    margin-left: 6px;
+    font-size: 0.98rem;
+}
+.options input[type="checkbox"] {
+    accent-color: #b2ffb2;
+    width: 16px;
+    height: 16px;
+}
+
+.strength-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    margin-top: 2px;
+}
+#strength-label {
+    font-weight: bold;
+    letter-spacing: 1px;
+    min-width: 70px;
+}
+#strength-bars {
+    display: flex;
+    gap: 2px;
+    margin-left: 4px;
+}
+#strength-bars .bar {
+    width: 12px;
+    height: 18px;
+    background: #222;
+    border-radius: 2px;
+    transition: background 0.2s;
+}
+
+#generate-btn {
+    background: #b2ffb2;
+    color: #181924;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.2s, color 0.2s;
+    letter-spacing: 1px;
+}
+#generate-btn:hover {
+    background: #fff;
+    color: #23243a;
+}
