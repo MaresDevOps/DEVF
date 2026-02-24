@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguimiento de Libros</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Mi Seguimiento de Libros</h1>
+        
+        <div class="caja-formulario">
+            <h2>Agregar un Comentario</h2>
+            <form id="formulario-comentario">
+                <label for="titulo-libro">Título del libro:</label>
+                <input type="text" id="titulo-libro" placeholder="Escribe el título..." required>
+
+                <label>Calificación:</label>
+                <!-- Aquí ponemos nuestras estrellas interactivas -->
+                <div id="contenedor-estrellas" class="estrellas">
+                    <span class="estrella activa" data-valor="1">★</span>
+                    <span class="estrella activa" data-valor="2">★</span>
+                    <span class="estrella activa" data-valor="3">★</span>
+                    <span class="estrella activa" data-valor="4">★</span>
+                    <span class="estrella activa" data-valor="5">★</span>
+                </div>
+
+                <label for="texto-comentario">Comentario:</label>
+                <textarea id="texto-comentario" placeholder="Escribe tu opinión..." required></textarea>
+
+                <button type="submit">Guardar Comentario</button>
+            </form>
+        </div>
+
+        <div class="caja-comentarios">
+            <h2>Comentarios Guardados</h2>
+            <div id="lista-comentarios">
+                <!-- Aquí van los comentarios -->
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

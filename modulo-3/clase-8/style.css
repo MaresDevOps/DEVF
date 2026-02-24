@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e9ecef;
+    color: #333333;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Contenedor de la aplicación principal */
+.contenedor {
+    width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+h1 {
+    color: #0056b3;
+    text-align: center;
+}
+
+h2 {
+    color: #444444;
+}
+
+.caja-formulario {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border: 1px solid #dddddd;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 100px;
+}
+
+/* Lógica visual de estrellas grandes y clickeables */
+.estrellas {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.estrella {
+    color: #cccccc;
+    cursor: pointer;
+}
+
+.estrella.activa {
+    color: #ffaa00;
+}
+
+button {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 15px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #004494;
+}
+
+.caja-comentarios {
+    margin-top: 20px;
+}
+
+/* Elementos visuales del hilo de opiniones */
+.comentario-item {
+    background-color: #f4f4f4;
+    border: 1px solid #cccccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.comentario-titulo {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0056b3;
+    margin-top: 0;
+}
+
+.comentario-calificacion {
+    color: #ffaa00;
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+.boton-eliminar {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.boton-eliminar:hover {
+    background-color: #c82333;
+}
