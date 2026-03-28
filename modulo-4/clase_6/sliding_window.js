@@ -1,3 +1,4 @@
+// Función que encuentra la palabra más larga usando la técnica Sliding Window (Ventana deslizante)
 function encontrarPalabraMasLarga(texto) {
     const palabras = texto.split(' ');
     let longestWord = "";
