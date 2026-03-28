@@ -1,4 +1,4 @@
-// Función que encuentra la palabra más larga usando la técnica Sliding Window (Ventana deslizante)
+
 function encontrarPalabraMasLarga(texto) {
     
     // 1. Utilizamos .split(' ') para convertir el párrafo en un arreglo de palabras sueltas
