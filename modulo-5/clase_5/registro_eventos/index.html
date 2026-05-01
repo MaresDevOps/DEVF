@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Eventos</title>
+  <!-- Archivo CSS separado -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Registro de Evento</h1>
+  <form id="registroEvento">
+    <!-- Contenedor para mostrar mensajes de error dinámicos -->
+    <div id="mensajesError" class="error-container" style="display:none;"></div>
+    
+    <label for="nombre">Nombre completo:</label>
+    <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required>
+
+    <label for="correo">Correo electrónico:</label>
+    <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+
+    <label for="telefono">Teléfono (10 dígitos):</label>
+    <input type="tel" id="telefono" name="telefono" placeholder="5512345678" required>
+
+    <label>Intereses (selecciona al menos uno):</label>
+    <div class="checkbox-group">
+      <label><input type="checkbox" name="intereses" value="tecnología"> Tecnología</label>
+      <label><input type="checkbox" name="intereses" value="negocios"> Negocios</label>
+      <label><input type="checkbox" name="intereses" value="arte"> Arte</label>
+    </div>
+
+    <label>Horario preferido:</label>
+    <div class="radio-group">
+      <label><input type="radio" name="horario" value="mañana" required> Mañana</label>
+      <label><input type="radio" name="horario" value="tarde"> Tarde</label>
+      <label><input type="radio" name="horario" value="noche"> Noche</label>
+    </div>
+
+    <label for="fecha">Fecha del evento (debe ser a futuro):</label>
+    <input type="date" id="fecha" name="fecha" required>
+
+    <label for="hora">Hora preferida:</label>
+    <input type="time" id="hora" name="hora" required>
+
+    <label for="archivo">Documento de identificación (opcional):</label>
+    <input type="file" id="archivo" name="archivo" accept=".pdf,.jpg,.jpeg,.png">
+
+    <button type="submit">Registrarse</button>
+  </form>
+
+  <!-- Archivo JS separado -->
+  <script src="app.js"></script>
+</body>
+</html>

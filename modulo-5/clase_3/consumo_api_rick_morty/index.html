@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumo de APIs - Rick & Morty</title>
+    <!-- Importamos Axios desde un CDN para poder usarlo en el navegador -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            padding: 20px; 
+            background-color: #f4f4f9; 
+            color: #333;
+        }
+        h1 { text-align: center; }
+        .buttons { 
+            display: flex; 
+            justify-content: center; 
+            margin-bottom: 30px; 
+            gap: 15px; 
+        }
+        button { 
+            padding: 10px 20px; 
+            font-size: 16px; 
+            border: none; 
+            border-radius: 5px; 
+            cursor: pointer; 
+            font-weight: bold;
+            color: white;
+        }
+        #btn-fetch { background-color: #2563eb; }
+        #btn-fetch:hover { background-color: #1d4ed8; }
+        
+        #btn-axios { background-color: #7c3aed; }
+        #btn-axios:hover { background-color: #6d28d9; }
+
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+            gap: 20px; 
+        }
+        .card { 
+            background: white; 
+            padding: 15px; 
+            border-radius: 8px; 
+            text-align: center; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card img { 
+            width: 100%; 
+            border-radius: 8px; 
+            margin-bottom: 10px;
+        }
+        .card h3 { margin: 0; font-size: 1.1rem; }
+        .card p { margin: 5px 0 0; color: #666; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <h1>Información de Personajes (Rick & Morty)</h1>
+    
+    <div class="buttons">
+        <button id="btn-fetch">Obtener con Fetch</button>
+        <button id="btn-axios">Obtener con Axios</button>
+    </div>
+    
+    <!-- Contenedor donde se mostrarán las tarjetas de los personajes -->
+    <div id="data-container" class="grid"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
