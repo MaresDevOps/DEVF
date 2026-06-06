@@ -1,0 +1,230 @@
+.arcade-cabinet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #111;
+  background-image: 
+    linear-gradient(45deg, #111 25%, transparent 25%, transparent 75%, #111 75%, #111), 
+    linear-gradient(45deg, #111 25%, transparent 25%, transparent 75%, #111 75%, #111);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+  padding: 20px;
+}
+
+.screen-bezel {
+  background: #222;
+  padding: 30px;
+  border-radius: 20px;
+  border: 4px solid #333;
+  box-shadow: 
+    0 20px 50px rgba(0,0,0,0.8),
+    inset 0 0 20px rgba(0,0,0,1);
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+}
+
+.game-screen {
+  background-color: #050510;
+  border: 2px solid #00ffff;
+  border-radius: 10px;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 
+    0 0 20px rgba(0, 255, 255, 0.2),
+    inset 0 0 30px rgba(0, 255, 255, 0.1);
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* CRT Scanline Effect */
+.scanline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.1);
+  opacity: 0.4;
+  animation: scanline 6s linear infinite;
+  pointer-events: none;
+}
+
+.game-header {
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ff00ff;
+  text-shadow: 0 0 5px #ff00ff;
+}
+
+.title {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.neon-text {
+  color: #fff;
+  text-shadow: 
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #0ff,
+    0 0 40px #0ff,
+    0 0 80px #0ff;
+}
+
+.game-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  position: relative;
+  z-index: 2;
+}
+
+.feedback-screen {
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  animation: pulse 2s infinite;
+}
+
+.neutral {
+  color: #00ff00;
+  text-shadow: 0 0 10px #00ff00;
+  border: 1px dashed #00ff00;
+}
+
+.neon-box-success {
+  background: rgba(0, 255, 0, 0.1);
+  border: 2px solid #00ff00;
+  box-shadow: 0 0 15px #00ff00, inset 0 0 15px #00ff00;
+  color: #00ff00;
+}
+
+.neon-box-error {
+  background: rgba(255, 0, 0, 0.1);
+  border: 2px solid #ff0000;
+  box-shadow: 0 0 15px #ff0000, inset 0 0 15px #ff0000;
+  color: #ff0000;
+}
+
+.feedback-screen h2 {
+  margin: 0 0 10px;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+.controls {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+  justify-content: center;
+}
+
+.game-input {
+  background: rgba(0, 255, 255, 0.1);
+  border: 2px solid #00ffff;
+  color: #00ffff;
+  font-family: inherit;
+  font-size: 1.5rem;
+  padding: 10px 15px;
+  width: 120px;
+  text-align: center;
+  border-radius: 4px;
+  outline: none;
+}
+
+.game-input:focus {
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
+
+/* Ocultar flechas del input number */
+.game-input::-webkit-outer-spin-button,
+.game-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.btn {
+  font-family: inherit;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  background: transparent;
+  transition: all 0.2s;
+  text-transform: uppercase;
+}
+
+.neon-btn {
+  color: #ff00ff;
+  border: 2px solid #ff00ff;
+  box-shadow: 0 0 10px #ff00ff, inset 0 0 5px #ff00ff;
+}
+
+.neon-btn:hover {
+  background: #ff00ff;
+  color: #fff;
+  box-shadow: 0 0 20px #ff00ff, inset 0 0 10px #ff00ff;
+}
+
+.shake {
+  animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+.cabinet-controls {
+  margin-top: 20px;
+}
+
+.coin-slot {
+  background: #222;
+  border: 2px solid #555;
+  color: #ff3300;
+  padding: 5px 20px;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  animation: blink 1s infinite;
+  text-shadow: 0 0 5px #ff3300;
+}
+
+@keyframes scanline {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(400px); }
+}
+
+@keyframes pulse {
+  0% { opacity: 0.8; }
+  50% { opacity: 1; }
+  100% { opacity: 0.8; }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes shake {
+  10%, 90% { transform: translate3d(-2px, 0, 0); }
+  20%, 80% { transform: translate3d(4px, 0, 0); }
+  30%, 50%, 70% { transform: translate3d(-8px, 0, 0); }
+  40%, 60% { transform: translate3d(8px, 0, 0); }
+}
