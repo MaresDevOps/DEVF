@@ -41,7 +41,7 @@ const obtenerInfoPokemon = (link, callback) => {
 obtenerTodosPokemones()
 
 
-const obtenerTodosPokemonesAvanzado = () => {
+const obtenerTodosPokemones = () => {
 fetch("https://pokeapi.co/api/v2/pokemon?limit=150&offset=0", {
   method: "GET",
   redirect: "follow"
@@ -69,15 +69,15 @@ fetch("https://pokeapi.co/api/v2/pokemon?limit=150&offset=0", {
         });
     });
 
-    const obtenerInfoPokemonPromesa = (link) => {
-        return new Promise((resolve, reject) => {
+    obtenerInfoPokemon = (link) => {
+        return Promise(reject, resolve => {
             return resolve(fetch(link))
         })
     }
 
 
     pokemones.results.forEach(element => {
-         obtenerInfoPokemonPromesa(element.url)
+         obtenerInfoPokemon(element.url)
          .then((result) => obtetenerJuegos(JSON.parse(result)))
          .then((result) => obtenerIdiomas(JSON.parse(result)))
          .then((result) => obtenerVariaciones(JSON.parse(result)))
